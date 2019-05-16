@@ -6,5 +6,12 @@ module Types
     def test_field
       "Hello World"
     end
+    field :test_write, String, null: false do
+      argument :text, String, required: false
+    end
+    def test_write(text:)
+      return "hello world!!" if !text.present?
+      text
+    end
   end
 end
