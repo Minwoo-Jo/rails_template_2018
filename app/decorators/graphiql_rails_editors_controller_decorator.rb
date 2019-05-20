@@ -14,7 +14,7 @@ module GraphiQLRailsEditorsControllerDecorator
 
   def set_auth_headers
     user = User.find_by_email(params[:email])
-
+    user = User.first
     if user.present?
       user_auth_token = user.create_new_auth_token
 

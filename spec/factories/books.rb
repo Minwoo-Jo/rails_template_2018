@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :book do
-    title { Forgery('lorem_ipsum').title }
+    title { Forgery('name').company_name }
     isbn { SecureRandom.uuid }
     user { FactoryBot.create(:user) }
   end

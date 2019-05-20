@@ -20,6 +20,7 @@ module RailsTemplate
       g.helper false
       g.test_framework :rspec
     end
+    config.action_controller.forgery_protection_origin_check = false
 
     # rack-cors setup
     # Following lines will allow GET, POST or OPTIONS requests from any origin on any resource.
